@@ -1,5 +1,8 @@
 # Django Articles Website
-this is a website to create/read articles
+This is a website to create/read articles
+There are 2 Types of users : Writer & Client
+There are 2 Types of articles : Premium & Standard
+Zarrinpal is used to buy subscription
 
 ## project images :
 
