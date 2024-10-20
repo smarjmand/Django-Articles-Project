@@ -35,12 +35,16 @@ this is a website to create/read articles
 <img width="1267" alt="create_article" src="https://github.com/user-attachments/assets/207b56e2-f144-4be2-b454-3584b88526df">
 
 
-<h4>Delete Article :</h4>
-<img width="1262" alt="delete_article" src="https://github.com/user-attachments/assets/9624ee3d-b394-486f-a31d-c46a5588500a">
-
-
 <h4>My Articles Page :</h4>
 <img width="1232" alt="my_articles" src="https://github.com/user-attachments/assets/b7b7ddc7-27d1-4160-8c97-4c3f9dfe40dd">
+
+
+<h4>Client Articles Page : </h4>
+<img width="1243" alt="client_articles" src="https://github.com/user-attachments/assets/4b850780-fce6-492a-9e48-5d1ebec91031">
+
+
+<h4>Delete Article :</h4>
+<img width="1262" alt="delete_article" src="https://github.com/user-attachments/assets/9624ee3d-b394-486f-a31d-c46a5588500a">
 
 
 <h4>Order Subscription Page :</h4>
