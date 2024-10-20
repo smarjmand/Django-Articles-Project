@@ -1,0 +1,26 @@
+{% extends 'base_client.html' %}
+
+{% block title %}
+    داشبورد
+{% endblock %}
+
+{% block content %}
+    <div class="container bg-white shadow-md p-5 form-layout text-center">
+        <h5 style="letter-spacing: .05px">🎓 {{ user.first_name }}،  خوش آمدی !</h5>
+        {% if msg %}
+            <hr>
+            <br>
+            <h6 style="letter-spacing: .05px">{{ msg }}</h6>
+        {% endif %}
+        <br>
+        {% if order == True %}
+            <a href="{% url 'subscription_plans_page'%}" class="btn btn-outline-success w-100">
+                خرید اشتراک
+            </a>
+        {% else %}
+            <a href="{% url 'client_articles_page'%}" class="btn btn-outline-success w-100">
+                مشاهده مقاله ها
+            </a>
+        {% endif %}
+    </div>
+{% endblock %}

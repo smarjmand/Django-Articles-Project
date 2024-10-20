@@ -1,0 +1,21 @@
+{% extends 'base_writer.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    ایحاد مقاله
+{% endblock %}
+
+{% block content %}
+    <div class="container bg-white shadow-md p-5 form-layout">
+        <h1 style="letter-spacing: .05px" class="text-center">ایجاد مقاله</h1>
+        <hr>
+        <p class="text-center">اینجا می توانید مقالات ویژه ی خود را نیز بارگذاری کنید</p>
+        <br>
+        <form method="POST" autocomplete="off">
+            {% csrf_token %}
+            {{ CreateArticleForm|crispy }}
+            <br>
+            <input class="btn btn-outline-success w-100" type="submit" value="ایجاد">
+        </form>
+    </div>
+{% endblock %}

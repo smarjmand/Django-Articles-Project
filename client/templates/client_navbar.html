@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand main-heading" href="{% url 'home_page' %}">&nbsp; مقاله‌نو</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="تغییر نمایش منو">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="btn btn-secondary navbar-btn" type="button" href="{% url 'client_dashboard_page' %}">داشبورد</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-secondary navbar-btn" type="button" href="{% url 'client_articles_page' %}">مقاله ها</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-secondary navbar-btn" type="button" href="{% url 'client_account_page' %}">حساب کاربری</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-secondary navbar-btn" type="button" href="{% url 'logout_view' %}">خروج</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>

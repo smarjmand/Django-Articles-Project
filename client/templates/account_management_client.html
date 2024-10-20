@@ -1,0 +1,36 @@
+{% extends 'base_client.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    حساب کاربری
+{% endblock %}
+
+{% block content %}
+    {% if plan == False %}
+        <div class="container bg-white shadow-md p-5 form-layout text-center">
+            <h2 style="letter-spacing: .05px" class="text-center">خرید اشتراک</h2>
+            <hr>
+            <br>
+            <p>برای مشاهده ی مقالات، به اشتراک نیاز دارید</p>
+            <a href="{% url 'subscription_plans_page' %}" class="btn btn-outline-success w-100">
+                خرید اشتراک
+            </a>
+        </div>
+    {% endif %}
+    <br>
+    <div class="container bg-white shadow-md p-5 form-layout">
+        <h1 style="letter-spacing: .05px" class="text-center">حساب کاربری</h1>
+        <hr>
+        <form method="POST" autocomplete="off">
+            {% csrf_token %}
+            {{ UpdateClientAccountForm|crispy }}
+            <br>
+            <input class="btn btn-outline-success w-100" type="submit" value="ویرایش">
+        </form>
+        <br>
+        <a href="{% url 'client_delete_page' %}" class="btn btn-outline-danger w-100">
+            حذف حساب کاربری
+        </a>
+    </div>
+    <br>
+{% endblock %}

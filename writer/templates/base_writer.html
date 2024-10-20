@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" type="text/css" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    {% block header %}{% endblock %}
+</head>
+<body>
+{# Writer Header : #}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand main-heading" href="{% url 'writer_dashboard_page' %}">&nbsp; مقاله‌نو</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="تغییر نمایش منو">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse text-center" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="btn btn-secondary navbar-btn" type="button" href="{% url 'writer_dashboard_page' %}">داشبورد</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-secondary navbar-btn" type="button" href="{% url 'create_article_page' %}">ایجاد مقاله</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-secondary navbar-btn" type="button" href="{% url 'writer_articles_page' %}">مقاله های من</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-secondary navbar-btn" type="button" href="{% url 'writer_account_page' %}">حساب کاربری</a>
+            </li>
+            <li class="nav-item">
+                <a class="btn btn-secondary navbar-btn" type="button" href="{% url 'logout_view' %}">خروج</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<br>
+
+{# Content :  #}
+{% block content %}{% endblock %}
+<br>
+
+{#Footer References :   #}
+{% block footer %}{% endblock %}
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+</body>
+</html>

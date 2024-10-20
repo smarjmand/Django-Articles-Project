@@ -1,0 +1,40 @@
+{% extends 'base_client.html' %}
+
+{% block title %}
+    خرید اشتراک
+{% endblock %}
+
+{% block content %}
+
+    <div class="container bg-white shadow-md p-5 order-form-layout text-center">
+        <h2 style="letter-spacing: .05px" class="text-center">خرید اشتراک</h2>
+
+    </div>
+
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-md-5 bg-white shadow-md p-5 sub-form-layout text-center m-4">
+                <h5 style="letter-spacing: .05px">اشتراک استاندارد</h5>
+                <hr>
+                <p>دسترسی به مقالات رایگان</p>
+                <hr>
+                <p>قیمت : 50,000 تومان</p>
+                <br>
+                <a href="{% url 'payment_request_view' plan='standard'%}" class="btn btn-outline-success w-100">خرید</a>
+            </div>
+
+            <div class="col-md-5 bg-white shadow-md p-5 sub-form-layout text-center m-4">
+                <h5 style="letter-spacing: .05px">⭐️ اشتراک ویژه</h5>
+                <hr>
+                <p>دسترسی به تمام مقالات</p>
+                <hr>
+                <p>قیمت : 100,000 تومان</p>
+                <br>
+                <a href="{% url 'payment_request_view' plan='premium' %}" class="btn btn-outline-success w-100">خرید</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

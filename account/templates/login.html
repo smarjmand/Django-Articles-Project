@@ -1,0 +1,30 @@
+{% extends 'base_account.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}
+    مقاله نو | ورود
+{% endblock %}
+
+{% block content %}
+    <div class="container bg-white shadow-md p-5 account-form-layout">
+        <h1 style="letter-spacing: .05px" class="text-center">ورود به حساب کاربری</h1>
+        <hr>
+        <p class="text-center">
+            * اگر ایمیل فعال سازی حساب کاربری را دریافت نکرده اید، از طریق
+            <a href="{% url 'reset_password' %}">فراموشی کلمه عبور</a>
+            اقدام کنید.
+        </p>
+        <br>
+        <form method="POST" autocomplete="off">
+            {% csrf_token %}
+            {{ LoginForm|crispy }}
+            <br>
+            <input class="btn btn-outline-success w-100" type="submit" value="ورود">
+        </form>
+        <br>
+        <a style="text-decoration: none" href="{% url 'reset_password' %}">
+            فراموشی کلمه عبور
+        </a>
+    </div>
+{% endblock %}

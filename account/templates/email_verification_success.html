@@ -1,0 +1,23 @@
+{% extends 'base_account.html' %}
+
+{% block title %}
+    فعال سازی حساب کاربری
+{% endblock %}
+
+{% block content %}
+
+    <div class="container bg-white shadow-md p-5 form-layout">
+        <div class="text-center ">
+            <br>
+            <h4> فعال سازی حساب کاربری </h4>
+            <hr>
+            <p> حساب کاربری شما با موفقیت فعال گردید. </p>
+            <br>
+        </div>
+        <a href="{% url 'login_page' %}" class="btn btn-outline-success w-100">
+            ورود به حساب کاربری
+        </a>
+    </div>
+    <br>
+
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base_client.html' %}
+{% load jalali_tags %}
+
+{% block title %}
+    مقالات
+{% endblock %}
+
+{% block content %}
+
+    {% for article in AllArticles %}
+        <div class="container bg-white shadow-md p10 article-form-layout">
+            <br>
+            <h3 style="letter-spacing: .05px">{{ article.title }}</h3>
+            <br>
+            <p style="font-size: 20px">{{ article.content }}</p>
+            <br>
+            {% if article.is_premium == True %}
+                <p>⭐️ویژه</p>
+            {% endif %}
+            <p>ایجاد شده: {{ article.date_posted.date|to_jalali }}</p>
+
+        </div>
+        <br>
+    {% endfor %}
+
+{% endblock %}

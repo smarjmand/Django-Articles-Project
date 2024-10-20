@@ -1,0 +1,26 @@
+{% extends 'base_account.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    مقاله نو | ایجاد حساب کاربری
+{% endblock %}
+
+{% block content %}
+    <div class="container bg-white shadow-md p-5 account-form-layout">
+        <h1 style="letter-spacing: .05px" class="text-center">ایجاد حساب کاربری</h1>
+        <hr>
+        <p>با مقاله نو، به دنیای بی‌پایان دانش بپیوندید!</p>
+        <br>
+        <div>
+            <form method="POST" autocomplete="off">
+                {% csrf_token %}
+                {{ RegisterForm|crispy }}
+                <input class="btn btn-outline-success w-100" type="submit" value="ساخت حساب کاربری">
+            </form>
+        </div>
+        <br>
+        <a style="text-decoration: none" href="{% url 'login_page' %}">
+            حساب کاربری دارید؟
+        </a>
+    </div>
+{% endblock %}

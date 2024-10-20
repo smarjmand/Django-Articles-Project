@@ -1,0 +1,24 @@
+{% extends 'base_account.html' %}
+
+{% block title %}
+    مقاله نو | صفحه اصلی
+{% endblock %}
+
+{% block content %}
+    <div class="container bg-white shadow-md p-5 account-form-layout">
+        <hr>
+        <div class="text-center ">
+            <br><br><br>
+            <h4> مقاله‌نو.... برای دریافت مقالات اطلاعاتی بهترین‌ها را دنبال کنید! </h4>
+            <br>
+            <p> مجموعه گسترده‌ای از محتوای دست‌چین شده را مرور کنید. </p>
+            <br>
+            <a class="btn btn-success" type="button" href="{% url 'register_page' %}"> <i class="fa fa-angle-right" aria-hidden="true"></i> &nbsp; امروز شروع کنید</a>
+            <br><br>
+        </div>
+        <hr>
+        <a style="text-decoration: none" href="{% url 'login_page' %}">
+            حساب کاربری دارید؟
+        </a>
+    </div>
+{% endblock %}

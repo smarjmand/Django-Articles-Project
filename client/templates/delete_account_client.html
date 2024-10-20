@@ -1,0 +1,21 @@
+{% extends 'base_client.html' %}
+
+{% block title %}
+    حذف حساب کاربری
+{% endblock %}
+
+{% block content %}
+    <div class="container bg-white shadow-md p-5 form-layout">
+        <h1 style="letter-spacing: .05px" class="text-center">حذف حساب کاربری</h1>
+        <hr>
+        <br>
+        <form method="POST" autocomplete="off">
+            {% csrf_token %}
+            <p>آیا از حذف حساب کاربری خود مطمین هستید؟</p>
+            <input class="btn btn-outline-danger w-100" type="submit" value="حذف">
+        </form>
+        <br>
+        <a href="{% url 'client_dashboard_page' %}" class="btn btn-outline-info w-100">انصراف</a>
+        <br>
+    </div>
+{% endblock %}

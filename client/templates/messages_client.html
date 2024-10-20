@@ -1,0 +1,18 @@
+{% extends 'base_client.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <div class="container bg-white shadow-md p-5 form-layout text-center">
+        <h5 style="letter-spacing: .05px">{{ head_line }}</h5>
+        <hr>
+        <br>
+        <h6 style="letter-spacing: .05px">{{ msg }}</h6>
+        <br>
+        <a href="{% url 'client_dashboard_page'%}" class="btn btn-outline-dark w-100">
+            داشبورد
+        </a>
+    </div>
+{% endblock %}

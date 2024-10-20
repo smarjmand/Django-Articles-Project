@@ -1,0 +1,27 @@
+{% extends 'base_account.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    فعال سازی حساب کاربری
+{% endblock %}
+
+{% block content %}
+
+    <div class="container bg-white shadow-md p-5 form-layout">
+        <h1 style="letter-spacing: .05px" class="text-center">درخواست ایمیل فعال سازی</h1>
+        <hr>
+        <p>اگر ایمیل فعال سازی را دریافت نکرده اید، ایمیل خود را وارد کنید.</p>
+        <br>
+        {% if msg %}
+            <p class="alert alert-danger text-center">{{ msg }}</p>
+        {% endif %}
+        <form method="POST" autocomplete="off">
+            {% csrf_token %}
+            {{ form | crispy }}
+            <br>
+            <input class="btn btn-outline-success w-100" type="submit"  value="ثبت">
+        </form>
+        <br>
+    </div>
+
+{% endblock %}

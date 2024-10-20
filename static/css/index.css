@@ -1,0 +1,38 @@
+body {
+    direction: rtl;
+    text-align: right;
+    font-family: 'Vazirmatn', Tahoma, sans-serif;
+    font-size: 17px; /* افزایش اندازه فونت */
+    letter-spacing: 0px;
+    word-spacing: 0px;
+    background-color: #f0f0f0;
+}
+
+h4 {
+    letter-spacing: 0.5px; /* حذف فاصله بین حروف */
+    word-spacing: 0px; /* حذف فاصله بین کلمات */
+}
+
+.navbar {
+    justify-content: flex-end;
+
+}
+
+.navbar-brand {
+    margin-left: auto;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav {
+    margin-right: 0;
+}
+
+.custom-btn{
+    font-size: 15px;
+}
+
+.delete-btn{
+    direction: ltr;
+    text-align: right;
+}
